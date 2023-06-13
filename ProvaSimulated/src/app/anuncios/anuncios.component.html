@@ -1,5 +1,7 @@
 
-<div style="text-align: center;">
+<div style="text-align: center; background-color: blue; color: white;">
+
+<form [formGroup]="formGroupAnunciante"></form>   
 <label for="input" class="form-label">Empresa Nome</label>
 <input class="form-control" aria-labelledby="passwordHelpBlock"><br>
 
@@ -11,6 +13,11 @@
 
 <label for="input" class="form-label">Endereço</label>
 <input class="form-control" aria-labelledby="passwordHelpBlock"><br>
+
+<div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" type="button">Cadastrar</button>
+    <button class="btn btn-warning" type="button">Consultar</button>
+  </div>
 
 
 <div class="card" style="width: 18rem;">

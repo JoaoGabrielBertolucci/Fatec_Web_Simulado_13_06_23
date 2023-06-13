@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, retry } from 'rxjs';
+import { anuncio } from 'src/anuncio';
 
 
 @Injectable({
@@ -8,11 +9,13 @@ import { Observable, retry } from 'rxjs';
 })
 export class AnuncioserviceService {
 
-  url = 'https://localhost:8080/anuncios'
+  url = 'https://localhost:3000/Anuncios'
 
+  constructor(private http : HttpClient) { }
 
-
-  constructor() { }
+  Cadastro(Anuncios : anuncio): Observable<anuncio>{
+    return this.http.post<anuncio>(this.url, Anuncios);
+  }
 
   
 
